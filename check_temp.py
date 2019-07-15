@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 
 
 def sensor():
@@ -22,7 +23,8 @@ def read(device_id):
 def loop(device_id):
     while True:
         if read(device_id) != None:
-            print "Current temperature : %0.3f C" % read(device_id)[0]
+            print "\n"
+            print datetime.now().strftime('%A %m-%d-%Y %H:%M:%S')
             print "Current temperature : %0.3f F" % read(device_id)[1]
 
 def kill():

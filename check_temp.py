@@ -1,5 +1,7 @@
 import os
 
+
+
 def sensor():
     for i in os.listdir('/sys/bus/w1/devices'):
         if i != 'w1_bus_master1':
